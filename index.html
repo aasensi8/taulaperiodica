@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taula Periòdica Interactiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <h1>Taula Periòdica Interactiva</h1>
+        <p>
+          Passa el cursor o prem un element per veure la seva fitxa científica.
+        </p>
+      </header>
+
+      <section class="legend" aria-label="Llegenda de blocs">
+        <span class="tag tag-s">Bloc s</span>
+        <span class="tag tag-p">Bloc p</span>
+        <span class="tag tag-d">Bloc d</span>
+        <span class="tag tag-f">Bloc f</span>
+      </section>
+
+      <section class="table-stage">
+        <section id="periodic-table" class="periodic-table" aria-label="Taula periòdica"></section>
+
+        <aside id="element-overlay" class="element-overlay is-hidden" aria-label="Informació de l'element">
+          <button id="close-overlay" class="close-btn" aria-label="Tanca la fitxa">✕</button>
+          <article id="element-card" class="element-card"></article>
+        </aside>
+      </section>
+    </main>
+
+    <script src="vendor/three/three.min.js"></script>
+    <script src="vendor/three/OrbitControls.js"></script>
+    <script src="vendor/three/MarchingCubes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
